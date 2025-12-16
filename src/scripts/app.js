@@ -28,10 +28,12 @@ const signupBtn = document.getElementById('signup-btn');
 
 // Event listeners
 loginBtn.addEventListener('click', () => {
+    alert('Login button clicked!');
     window.location.href = './src/pages/login.html';
 });
 
 signupBtn.addEventListener('click', () => {
+    alert('Signup button clicked!');
     window.location.href = './src/pages/signup.html';
 });
 
