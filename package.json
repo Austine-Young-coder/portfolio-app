@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "description": "A social portfolio app for freelancers",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "node-sass src/styles/main.scss dist/styles/main.css",
+    "watch-css": "node-sass --watch src/styles/main.scss dist/styles/main.css",
+    "build": "npm run build-css",
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "serve": "^14.2.1"
+  },
+  "keywords": ["portfolio", "freelancer", "social"],
+  "author": "Your Name",
+  "license": "MIT"
+}

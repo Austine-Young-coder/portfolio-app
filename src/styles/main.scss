@@ -1,0 +1,75 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #212529;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+// Global styles
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    min-height: 100vh;
+    @include flex-center;
+    flex-direction: column;
+}
+
+header, footer {
+    width: 100%;
+    padding: 20px;
+    background-color: $primary-color;
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+// Buttons
+.btn-primary {
+    @include button-style;
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.btn-secondary {
+    @include button-style;
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}

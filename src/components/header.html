@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"><i class="material-icons">home</i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/feed.html"><i class="material-icons">feed</i> Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/explore.html"><i class="material-icons">explore</i> Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/messages.html"><i class="material-icons">message</i> Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/profile.html"><i class="material-icons">person</i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/settings.html"><i class="material-icons">settings</i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="logout-btn"><i class="material-icons">logout</i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+document.getElementById('logout-btn').addEventListener('click', () => {
+    // Assuming auth is global
+    auth.signOut().then(() => {
+        window.location.href = '../index.html';
+    });
+});
+</script>

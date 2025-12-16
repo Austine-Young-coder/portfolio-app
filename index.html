@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Freelancer Social App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <header id="header"></header>
+        <main id="main-content">
+            <section class="hero-section">
+                <div class="container text-center">
+                    <h1 class="display-4">Welcome to Portfolio</h1>
+                    <p class="lead">The ultimate platform for freelancers to showcase their work, connect with clients, and build their careers.</p>
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="material-icons">work</i>
+                            <h5>Showcase Your Work</h5>
+                            <p>Upload projects, add demos, and impress potential clients.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="material-icons">people</i>
+                            <h5>Connect & Network</h5>
+                            <p>Message other freelancers and build your professional network.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="material-icons">share</i>
+                            <h5>Share Your Profile</h5>
+                            <p>Get a unique link to share your portfolio anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-lg me-3" id="login-btn">
+                            <i class="material-icons">login</i> Login
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" id="signup-btn">
+                            <i class="material-icons">person_add</i> Sign Up
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/scripts/app.js"></script>
+    <script>
+        // Check if user is logged in
+        import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // Redirect to feed or profile
+                window.location.href = 'src/pages/feed.html';
+            }
+        });
+    </script>
+</body>
+</html>
